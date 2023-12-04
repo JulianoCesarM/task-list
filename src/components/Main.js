@@ -21,14 +21,14 @@ export default class Main extends Component {
           <input type="text" onChange={this.handleChange} value={novaTarefa} />
           <button type="submit">Adicionar</button>
         </form>
-        <ul>
+        <ul className="tarefas">
           {tarefas.map((tarefa) => (
             <li key={tarefa}>
               {tarefa}
-              <div>
+              <span>
                 <FaEdit className="edit" />
                 <FaWindowClose className="delete" />
-              </div>
+              </span>
             </li>
           ))}
         </ul>
