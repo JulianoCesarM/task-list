@@ -23,7 +23,13 @@ export default class Main extends Component {
         </form>
         <ul>
           {tarefas.map((tarefa) => (
-            <li key={tarefa}>{tarefa}</li>
+            <li key={tarefa}>
+              {tarefa}
+              <div>
+                <FaEdit className="edit" />
+                <FaWindowClose className="delete" />
+              </div>
+            </li>
           ))}
         </ul>
       </div>
